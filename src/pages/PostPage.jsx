@@ -25,7 +25,7 @@ export default function PostPage() {
   let user = apiUsers.find(user => user.id === userId);
 
   let tags = apiTags.filter(tag => {
-    return post.tags_id.includes(tag.id);
+    return post?.tags_id?.includes(tag.id);
   });
 
   useEffect(() => {

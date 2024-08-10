@@ -1,16 +1,24 @@
 import TagItem from "./TagItem";
 import { usePost } from "../context/PostContext";
+import tags from "../api/tags";
 
 export default function Tags () {
 
-  let {tags} = usePost();
+  let postData = usePost() ?? false;
+  let tagsList = tags;
+
+  if(postData) {
+    tagsList = postData.tags
+  }
 
   return (
-    <div className="w-[350px]">
-      <h3 className="text-xl pb-3">Tags</h3>
-      <ul className="flex gap-2 flex-wrap">
-        {tags.map(tag => <TagItem name={tag.name} />)}
-      </ul>
-    </div>
+    tagsList.length > 0 && (
+      <div className="w-[350px]">
+        <h3 className="text-xl pb-3">Tags</h3>
+        <ul className="flex gap-2 flex-wrap">
+          {tagsList.map(tag => <TagItem name={tag.name} />)}
+        </ul>
+      </div>
+    )
   )
 }
