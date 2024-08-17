@@ -34,7 +34,7 @@ export default function Layout ({children, tags, showSideBar}) {
             onClick={toggleTheme}
             className="border rounded border-black dark:border-white p-2 ml-auto text-xl"
           >
-            {theme === 'light' ? <FaMoon /> : <FaSun />}
+            {theme === 'light' ? <FaMoon id="fa-moon" /> : <FaSun id="fa-sun" />}
           </button>
       </Header>
       
