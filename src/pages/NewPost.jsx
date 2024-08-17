@@ -10,6 +10,7 @@ export default function NewPost() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
+
     const options = {
       method: "POST",
       headers: {

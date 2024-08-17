@@ -12,6 +12,7 @@ import Exemplos from './pages/Exemplos.jsx';
 import Search from './pages/Search.jsx';
 import { PostProvider } from "./context/PostContext.jsx";
 import NewPost from "./pages/NewPost.jsx";
+import NewUser from "./pages/NewUser.jsx";
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
@@ -25,6 +26,7 @@ const routes = createBrowserRouter(
       } />
       <Route path="/author/:username" element={<AuthorPage />} />
       <Route path="/newpost" element={<NewPost />} />
+      <Route path="/newuser" element={<NewUser />} />
       <Route path="/exemplos" element={<Exemplos />} />
     </>
   )

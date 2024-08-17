@@ -1,3 +1,84 @@
 {
-  "posts": []
+  "users": [
+    {
+      "id": "1",
+      "name": "Joaquim",
+      "email": "joaquim@silva.com",
+      "password": "1232456"
+    },
+    {
+      "id": "b788",
+      "name": "Joaquim",
+      "email": "joaquim@silva.com",
+      "password": "1232456"
+    },
+    {
+      "id": "6a1c",
+      "name": "testq",
+      "email": "teste",
+      "password": "teste"
+    },
+    {
+      "id": "e0f0",
+      "name": "testq",
+      "email": "teste",
+      "password": "teste"
+    },
+    {
+      "id": "def6",
+      "name": "testq",
+      "email": "teste",
+      "password": "teste"
+    },
+    {
+      "id": "2641",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "3d18",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "f755",
+      "name": "teste",
+      "email": "teste",
+      "password": "teste"
+    },
+    {
+      "id": "fa71",
+      "name": "teste",
+      "email": "teste",
+      "password": "teste"
+    },
+    {
+      "id": "29e7",
+      "name": "teste",
+      "email": "teste",
+      "password": "teste"
+    },
+    {
+      "id": "69e5",
+      "name": "teste",
+      "email": "teste",
+      "password": "teste"
+    },
+    {
+      "id": "5f30",
+      "name": "teste",
+      "email": "teste",
+      "password": "teste"
+    }
+  ],
+  "posts": [
+    {
+      "id": "50a3",
+      "title": "Teste 123",
+      "content": "Teste",
+      "slug": "teste-123"
+    }
+  ]
 }
