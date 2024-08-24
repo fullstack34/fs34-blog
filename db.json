@@ -75,10 +75,36 @@
   ],
   "posts": [
     {
-      "id": "50a3",
-      "title": "Teste 123",
-      "content": "Teste",
-      "slug": "teste-123"
+      "id": 1,
+      "user_id": 2,
+      "tags_id": [1, 2],
+      "title": "Aprenda a centralizar uma div",
+      "slug": "aprenda-a-centralizar-uma-div",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iusto ab itaque corporis pariatur sapiente omnis. corporis pariatur sapiente omnis Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iusto ab itaque corporis pariatur sapiente omnis. corporis pariatur sapiente omnis Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iusto ab itaque corporis pariatur sapiente omnis. corporis pariatur sapiente omnis Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iusto ab itaque corporis pariatur sapiente omnis. corporis pariatur sapiente omnis Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iusto ab itaque corporis pariatur sapiente omnis. corporis pariatur sapiente omnis Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iusto ab itaque corporis pariatur sapiente omnis. corporis pariatur sapiente omnis Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iusto ab itaque corporis pariatur sapiente omnis. corporis pariatur sapiente omnis Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iusto ab itaque corporis pariatur sapiente omnis. corporis pariatur sapiente omnis Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iusto ab itaque corporis pariatur sapiente omnis. corporis pariatur sapiente omnis Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iusto ab itaque corporis pariatur sapiente omnis. corporis pariatur sapiente omnis Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iusto ab itaque corporis pariatur sapiente omnis. corporis pariatur sapiente omnis Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iusto ab itaque corporis pariatur sapiente omnis. corporis pariatur sapiente omnis Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iusto ab itaque corporis pariatur sapiente omnis. corporis pariatur sapiente omnis Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iusto ab itaque corporis pariatur sapiente omnis. corporis pariatur sapiente omnis Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iusto ab itaque corporis pariatur sapiente omnis. corporis pariatur sapiente omnis Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iusto ab itaque corporis pariatur sapiente omnis. corporis pariatur sapiente omnis" ,
+      "image_path": "/public/profile.avif",
+      "date": "2024-10-20"
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "tags_id": [2, 3],
+      "title": "Como fazer uma lista com CSS Grid",
+      "slug": "como-fazer-uma-lista-com-CSS-grid",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iusto ab itaque corporis pariatur sapiente omnis. corporis pariatur sapiente omnis",
+      "image_path": "/public/profile.avif",
+      "date": "2024-10-25"
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "JS",
+      "prefix": "Frontend"
+    },
+    {
+      "id": 2,
+      "name": "Ruby",
+      "prefix": "Backend"
     }
   ]
 }

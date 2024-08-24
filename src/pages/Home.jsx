@@ -2,11 +2,23 @@ import PostHeader from './../components/PostHeader';
 import PostBody from './../components/PostBody';
 import Layout from './../components/Layout';
 import Post from '../components/Post';
-import posts from '../api/posts';
+// import posts from '../api/posts';
 import users from '../api/users';
+import { useEffect, useState } from 'react';
 
 
 function App() {
+
+    let [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:3000/posts')
+            .then(response => response.json())
+            .then(posts => {
+                setPosts(posts);
+            })
+    }, [])
+
     return (
         <>
             <Layout showSideBar>
