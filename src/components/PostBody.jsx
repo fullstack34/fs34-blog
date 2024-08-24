@@ -6,7 +6,7 @@ export default function PostBody({content, title, slug, image}) {
 		<div className="flex gap-4 ml-3">
 			<div className="w-full">
 				<h2 className="font-bold mb-2 text-2xl">
-					<Link to={slug} className="hover:underline">{title}</Link>
+					<Link to={slug} className="hover:underline" data-cy="post-title">{title}</Link>
 				</h2>
 				<p className="line-clamp-3">{content}</p>
 			</div>
