@@ -2,14 +2,14 @@ import PostHeader from './../components/PostHeader';
 import PostBody from './../components/PostBody';
 import Layout from './../components/Layout';
 import Post from '../components/Post';
-// import posts from '../api/posts';
+import postsApi from '../api/posts';
 import users from '../api/users';
 import { useEffect, useState } from 'react';
 
 
 function App() {
 
-    let [posts, setPosts] = useState([]);
+    let [posts, setPosts] = useState(postsApi);
 
     useEffect(() => {
         fetch('http://localhost:3000/posts')
@@ -23,19 +23,15 @@ function App() {
         <>
             <Layout showSideBar>
                 { posts.map(function(post) {
-                    
-                    let user = users.find(function(user) {
-                        return user.id === post.user_id;
-                    });
 
                     return (
                         <Post>
-                            <PostHeader 
+                            {/* <PostHeader 
                                 authorName={user.name} 
                                 authorProfile={user.profile_path}
                                 postDate={post.date}
                                 authorUsername={user.username} 
-                            />
+                            /> */}
                             <PostBody 
                                 content={post.content}
                                 title={post.title} 
