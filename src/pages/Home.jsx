@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
 
 function App() {
 
-    let [posts, setPosts] = useState(postsApi);
+    let [posts, setPosts] = useState([]);
 
     useEffect(() => {
         fetch('http://localhost:3000/posts')
@@ -24,19 +24,21 @@ function App() {
             <Layout showSideBar>
                 { posts.map(function(post) {
 
+                    console.log(post);
+
                     return (
                         <Post>
-                            {/* <PostHeader 
-                                authorName={user.name} 
-                                authorProfile={user.profile_path}
-                                postDate={post.date}
-                                authorUsername={user.username} 
-                            /> */}
+                            <PostHeader 
+                                authorName={post.author.fullname} 
+                                authorProfile={post.author.image}
+                                postDate={post.createdAt}
+                                authorUsername={post.author.username} 
+                            />
                             <PostBody 
                                 content={post.content}
                                 title={post.title} 
                                 slug={post.slug} 
-                                image={post.image_path}
+                                image={post.image}
                             />
                         </Post>
                     );
