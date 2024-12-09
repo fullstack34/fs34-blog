@@ -31,7 +31,7 @@ function App() {
                             <PostHeader 
                                 authorName={post.author.fullname} 
                                 authorProfile={post.author.image}
-                                postDate={post.createdAt}
+                                postDate={post.date}
                                 authorUsername={post.author.username} 
                             />
                             <PostBody 
