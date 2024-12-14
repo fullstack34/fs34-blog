@@ -9,7 +9,7 @@ import { useTheme } from "../context/ThemeContext";
 import { FaMoon, FaSun } from "react-icons/fa";
 
 export default function Layout ({children, tags, showSideBar}) {
-  
+
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const [query, setQuery] = useState(searchParams.get('query'));

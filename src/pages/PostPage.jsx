@@ -9,15 +9,24 @@ import apiUsers from '../api/users';
 import apiTags from '../api/tags';
 
 import { usePost } from "../context/PostContext";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function PostPage() {
+
+  const [post, setPost] = useState({}); 
+  let user = {};
 
   let {setTags} = usePost();
 
   let params = useParams();
 
-  let post = apiPost.find(post => {
+  if(!post.id) {
+    fetch('http://localhost:3000/posts/' + params.postSlug)
+      .then(response => response.json())
+      .then(post => setPost(post))
+  }
+
+  /*let post = apiPost.find(post => {
     return post.slug === params.postSlug;
   });
 
@@ -30,26 +39,26 @@ export default function PostPage() {
 
   useEffect(() => {
     setTags(tags);
-  }, []);
+  }, []);*/
 
   return (
-    <Layout tags={[{name: "JAVASCRIPT"}]} showSideBar>
+    <Layout showSideBar>
       <h1 className="font-semibold text-3xl mb-4">{post.title}</h1>
       <Post>
-        <PostHeader 
-          authorName={user.name} 
-          authorProfile={user.profile_path}
-          authorUsername={user.username}
-          postDate={post.date}
-        />
+        {post.author && <PostHeader 
+            authorName={post.author.fullname} 
+            authorProfile={post.author.profile_path}
+            authorUsername={post.author.username}
+            postDate={post.createdAt}
+        />}
+        
           <div className="h-[250px] my-4">
-            <img src={post.image_path} className="rounded w-full h-full object-cover object-center" />
+            <img src={post.image} className="rounded w-full h-full object-cover object-center" />
           </div>
 
           <p>
             {post.content}
           </p>
-          <Tags/>
       </Post>
     </Layout>
   )

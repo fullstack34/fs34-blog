@@ -12,7 +12,7 @@ export const PostProvider = ({ children }) => {
     <PostContext.Provider value={{tags, setTags}}>
       {children}
     </PostContext.Provider>
-  )
+  );
 }
 
 export const usePost = () => useContext(PostContext)
