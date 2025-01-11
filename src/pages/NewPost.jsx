@@ -1,7 +1,15 @@
 
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom'
 
 export default function NewPost() {
+
+  let navigate = useNavigate();
+  let token = localStorage.getItem('user_token');
+
+  if(!token) {
+    navigate('/login');
+  }
 
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
@@ -10,16 +18,21 @@ export default function NewPost() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-
     const options = {
       method: "POST",
       headers: {
-        "Content-type": "application/json"
+        "Content-type": "application/json",
+        Authorization: `Bearer ${token}`
       },
       body: JSON.stringify({
+        user_id: 1,
         title,
         content,
-        slug
+        slug,
+        image: {
+          type: 'url',
+          content: "https://picsum.photos/200/200"
+        }
       })
     };
 
