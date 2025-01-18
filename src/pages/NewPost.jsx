@@ -30,7 +30,6 @@ export default function NewPost() {
         Authorization: `Bearer ${token}`
       },
       body: JSON.stringify({
-        user_id: 1,
         title,
         content,
         slug,
@@ -92,7 +91,7 @@ export default function NewPost() {
       </div>
       <div className="flex flex-xol gap-2">
         <label>Imagens</label>
-        <input type="file" onChange={handleUpload} />
+        <input type="file" accept="image/*" onChange={handleUpload} />
       </div>
       <div>
         <img src={preview} />
